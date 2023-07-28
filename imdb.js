@@ -139,7 +139,7 @@ function fetchMovie(){
 }
 
 // adding keydown event to search bar to get movie suggestions 
-searchBar.addEventListener('keydown',function(event){
+searchBar.addEventListener('keydown,ontouchend',function(event){
     let charCode=event.keyCode;
     if ((charCode > 64 && charCode < 91) || (charCode > 96 && charCode < 123)){   // if only alphabets are pressed then only function will be called
         setTimeout(fetchMoviesSuggestion,100);           // function will be called after each 100 msec so that function to be called after each alphabet pressing
